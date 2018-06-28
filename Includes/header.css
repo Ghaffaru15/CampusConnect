@@ -1,0 +1,71 @@
+html {
+  font-size: 2rem;
+  font-family: helvetica;
+}
+
+/* Header styling*/
+header {
+ height:60px; /*3rem;*/
+ width: 100%; 
+ background-color: #007791;
+ /*display: flex; */
+ display: flex;
+/* padding: 0.2rem 1rem; */
+ color: white;
+ /*line-height: 60px; */
+ /*position: fixed; */
+ /*z-index: 1;*/
+}
+
+header .headlogo {
+ /* margin-right: 3rem; */
+  padding-left: 3%;
+  padding-top: 10px;
+  padding-buttom: 10px;
+  font-size: 2rem;
+  font-family: comic, helvetica, cursive;
+  width: 25%;
+}
+
+form{
+	padding-top: 20px;
+	padding-buttom: 10px;
+	margin-right: 12rem;
+	display: inline;
+	width: 25%;
+}
+
+header nav {
+  display: inline;
+  float: right;
+  width: 44%;
+  padding-top: 20px;
+}
+
+.nav li {
+  display: inline;
+  color: #007791;
+  background-color: white;
+  margin: 0.2rem;
+ padding: 0.2rem 0.8rem; 
+  border-radius: 4px;
+}
+
+#signup {
+  background-color: #710101;
+  color: white;
+}
+
+.headlogo a {
+  text-decoration: none;
+  color: white;
+}
+
+ul a {
+  text-decoration: none;
+  color: #007791;
+}
+
+#signup a {
+  color: white;
+}

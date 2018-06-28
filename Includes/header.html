@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <title>
+		<?php
+			echo $page_title;
+		?>
+	</title>
+    <link rel="stylesheet" href="Includes/reset.css">
+    <link rel="stylesheet" href="Includes/header.css">
+	<link rel="stylesheet" href="Includes/footer.css">
+	<link rel="stylesheet" href="Includes/style.css">
+	<link rel="stylesheet" href="Includes/slider.css">
+	<link rel="stylesheet" href="Includes/signup.css">
+	<!--<link rel="stylesheet" href="Includes/login.css"> -->
+  </head>
+  <body>
+
+  <header>
+		<div class="headlogo">
+			<a href="index.php">Campus Connect</a>
+		</div>
+		<form class="searchbar" action="process.php" method="post">
+			<input type="text" name="searchquery" value="">
+			<input type="submit" name="submit" value="Search">
+		</form>
+		<nav class="nav">
+        <ul>
+          <li><a href="">Sell your product</a></li>
+          <li><a href="">Work with us</a></li>
+          <li><a href="sell_login.php">Login</a></li>
+          <li id="signup"><a href="register.php">Sign up!</a></li>
+        </ul>
+      </nav>
+  </header>

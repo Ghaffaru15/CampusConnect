@@ -1,0 +1,55 @@
+html {
+  font-size: 18px;
+  font-family: helvetica, sans-serif;
+}
+
+/* footer styling */
+ footer {
+   color: white;
+   background-color: #007791;
+   height: 12rem;
+   display: flex;
+ }
+
+footer .footlogo {
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  font-family: comic, helvetica, cursive;
+  line-height: 12rem;
+  color: #007791;
+  background-color: white;
+  border-radius: 50%;
+
+}
+
+footer ul {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 3rem;
+}
+
+footer ul li {
+  margin: 1.4rem 1rem;
+}
+
+.footer {
+  margin-left: 6rem;
+}
+
+.footcol4 li {
+  margin-bottom: 0rem;
+  color: white;
+}
+
+.footcol4 em {
+  background-color: #710101;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 0.3rem 0.3rem;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: white;
+}

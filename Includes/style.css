@@ -1,0 +1,125 @@
+.container {
+  font-family: helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+.container ul {
+  display: flex;
+  align-content: space-between;
+  background-color: #007791;
+  color: white;
+  margin: 0.6rem 0.4rem;
+  font-weight: bold;
+}
+
+.container ul li {
+  padding: 0.2rem 4.5rem;
+  color: #710101;
+  display: inline-flex;
+  align-content: space-between;
+  border-right: 2px solid white;
+}
+
+#itsforyou {
+  border-right: 0;
+}
+
+.hmecat {
+  display: flex;
+}
+
+.hmecontent {
+  display: ;
+}
+.hmecat{
+  display: inline-flex;
+  margin: 0 4rem;
+  padding-right: 2rem;
+}
+
+.hmecat p {
+  width: 70%;
+  padding: 0.5rem 0.2rem;
+  margin-left: 2rem;
+  line-height: 2rem;
+  color: #007791;
+}
+
+.hmecat .quiz p {
+  margin-left: 6rem;
+  width: 60%;
+}
+
+
+.hmecat .text {
+  height: 9.5rem;
+  padding: 0.5rem 0.6rem;
+  width: 80%;
+  margin-right: 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #710101;
+  font-family: comic, sans-serif;
+  border: 1px solid #710101;
+  border-radius: 3px;
+}
+
+.hmecat .quiztxt {
+  width: 10rem;
+  background-image: url('../Includes/quizimg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hmecat .prodtxt {
+  background-image: url("../Includes/prodimg3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.messages {
+  width: 70%;
+  margin: 1rem 15%;
+  border: 1px solid  #710101;
+  border-radius: 3px;
+  font-family: helvetica, sans-serif;
+  line-height: 1.5rem;
+  color: #007791;
+}
+
+
+.hmemsgs {
+  margin-bottom: 3rem;
+  text-align: center;
+
+}
+
+.hmemsgs h1 {
+  margin: 0.8rem 0;
+}
+
+.hmecat a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.
