@@ -6,7 +6,7 @@ html {
 /* Header styling*/
 header {
  height:60px; /*3rem;*/
- width: 100%; 
+ width: 100%;
  background-color: #007791;
  /*display: flex; */
  display: flex;
@@ -32,13 +32,13 @@ form{
 	padding-buttom: 10px;
 	margin-right: 12rem;
 	display: inline;
-	width: 25%;
+	width: 20%;
 }
 
 header nav {
   display: inline;
   float: right;
-  width: 44%;
+  width: 49%;
   padding-top: 20px;
 }
 
@@ -47,8 +47,8 @@ header nav {
   color: #007791;
   background-color: white;
   margin: 0.2rem;
- padding: 0.2rem 0.8rem; 
-  border-radius: 4px;
+ padding: 0.2rem 0.8rem;
+  border-radius: 2px;
 }
 
 #signup {
@@ -68,4 +68,23 @@ ul a {
 
 #signup a {
   color: white;
+}
+
+a:hover {
+  font-weight: 550;
+  transition: 0.3s;
+}
+
+.headlogo a:hover {
+  color: #710101;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+nav a:hover {
+  color: #710101;
+}
+
+#signup a:hover {
+  color: yellow;
 }

@@ -1,4 +1,5 @@
 <?php
+
 	$page_title = 'Campus Connect';
 	include("Includes/header.html");
 ?>

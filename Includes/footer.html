@@ -17,8 +17,14 @@
           <li><a href="">Special Services</a></li>
         </ul>
         <ul class="footcol4">
-          <li>Have an account? <em><a href="">Login!</a></em></li>
-          <li>New here? <em><a href="">Sign up!</a></em></li>
+          <?php
+            if (!isset($_SESSION['user_id']))
+                echo '<li>Have an account? <em><a href="login.php">Login!</a></em></li>';
+          ?>
+      <?php
+          if (!isset($_SESSION['user_id']))
+            echo '<li>New here? <em><a href="register.php">Sign up!</a></em></li>';
+      ?>
         </ul>
       </div>
     </footer>
