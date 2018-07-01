@@ -1,0 +1,88 @@
+#sellcontainer{
+    background-image: url("../Includes/loginbackg4.jpg");
+}
+
+.sellcontainer {
+  padding-top: 4rem;
+  width: 100%;
+  font-family: helvetica, sans-serif;
+
+padding-bottom: 10px;
+}
+
+/*body {
+  background-image: url("D:/PROJECTS/cc/resources/files/loginbackg4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sellcontainer h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 0.6rem;
+  color: #007791;
+}
+*/
+#selldisclaimer {
+  margin-left: 6%;
+  font-size: 22px;
+/*  color: #140642; */
+  color: #ffffff;
+}
+
+#selldisclaimer strong {
+  color: red;
+}
+
+.sellform {
+/*  display: block;
+  position: absolute; */
+  top: 180px;
+  align-items: center;
+  left: 36%;
+  font-size: 24px;
+  line-height: 2rem;
+  background-color: #007791;
+  width: 15rem;
+  padding: 2rem 2rem 2rem 5.5rem;
+  color: white;
+  border-radius: 7px;
+    margin-left: 35%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.sellcontainer form input {
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.sellcontainer form select {
+   font-size: 18px;
+   border-radius: 5px;
+}
+
+.sellcontainer form textarea {
+  border-radius: 4px;
+}
+
+
+a:hover {
+  font-weight: 550;
+  transition: 0.3s;
+}
+
+.headlogo a:hover {
+  color: #710101;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+nav a:hover {
+  color: #710101;
+}
+
+#signup a:hover {
+  color: yellow;
+}

@@ -32,7 +32,7 @@
           <p>Enter here to find all kinds of products
           and services available on your campus</p>
         </div>
-        <a href=""><div class="prodtxt  prodimg product hmecontent  text" >
+        <a href="products.php"><div class="prodtxt  prodimg product hmecontent  text" >
            PRODUCTS
         </div></a>
         <div class="quiz hmecontent">

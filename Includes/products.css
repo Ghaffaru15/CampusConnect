@@ -1,4 +1,4 @@
-.buycont {
+buycont {
   padding-top: 4rem;
   font-family: helvetica, sans-serif;
   align-items: center;
@@ -89,4 +89,26 @@ nav a:hover {
 
 footer a:hover {
   color: yellow;
+}
+
+/*.buycont {
+  position: absolute;
+  top: 4rem;
+  color: red
+}
+*/
+#filter{
+  width: 35%;
+  display: inline;
+  float: left;
+}
+#searchform{
+  width: 20%;
+  display: inline;
+  float: left;
+
+}
+#categoryform{
+  width: 15%;
+  float: left;
 }
