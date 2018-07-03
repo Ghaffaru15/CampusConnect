@@ -44,7 +44,7 @@
     </div>
   </div>
 <?php
-require('C:/xampp/mysql_connect.php');
+require(MySQL);
 
 $query = "SELECT users.user_id, contact, product_id, university, product_name, price,image_name,description FROM users,products WHERE
  users.user_id=products.user_id ORDER BY date_entered DESC";
@@ -78,7 +78,7 @@ if (mysqli_num_rows($result) > 0){
         <div class="productinfo">
         <img src="show_image.php?image=' . $row['product_id'] . '&name=' . urlencode($row['image_name']) . '" />
         <h4 class="productname"> ' . $row['product_name'] . '</h4>
-        <h4 class="productprice"> ' . $row['price'] . 'gh</h4>
+        <h4 class="productprice"> ¢' . $row['price'] . '</h4>
         <h4 class="sellerlocation"> ' . $row['university'] . '</h4>
       </div>';
 }

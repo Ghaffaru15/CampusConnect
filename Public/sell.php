@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   						echo '<p align="center">The product has been added</p>';
   						//Rename image
   						$idd = mysqli_stmt_insert_id($stmt);
-  						rename($temp,"C:/xampp/Campus/"  . $idd);
+  						rename($temp,"../Uploads/"  . $idd);
   						$_POST = array();
   					}
   					else{

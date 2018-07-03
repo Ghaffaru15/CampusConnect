@@ -3,7 +3,7 @@
 	$image = FALSE;
 	$name = (!empty($_GET['name'])) ? $_GET['name'] : 'print_image';
 	if (isset($_GET['image']) && filter_var($_GET['image'],FILTER_VALIDATE_INT, array('min_range' => 1))){
-		$image = 'C:/xampp/Campus/' . $_GET['image'];
+		$image = '../Uploads/' . $_GET['image'];
 
 		if (!file_exists($image) OR (!is_file($image))){
 		$image = FALSE;
@@ -11,7 +11,7 @@
 	}
 
 	if (!$image){
-		$image= 'images/unavailable.png';
+		$image= 'Images/unavailable.png';
 		$name = 'unavailable.png';
 	}
 

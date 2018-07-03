@@ -19,7 +19,7 @@
                     echo '<div class="productinfo">
                     <img src="show_image.php?image=' . $row['product_id'] . '&name=' . urlencode($row['image_name']) . '" />
                     <h4 class="productname"> ' . $row['product_name'] . '</h4>
-                    <h4 class="productprice"> ' . $row['price'] . 'gh</h4>
+                    <h4 class="productprice"> ¢' . $row['price'] . '</h4>
                     <h4 class="sellerlocation"> ' . $row['university'] . '</h4>
                     <p align="center"><a href="edit_product.php?id='. $row['product_id'] . '">Edit?</a></p>
                     <p align="center"><a href="delete_product.php?id=' . $row['product_id'] .  '">Delete?</a></p>
