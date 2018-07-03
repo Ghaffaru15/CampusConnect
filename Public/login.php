@@ -18,7 +18,7 @@
 
 		if (mysqli_num_rows($r) == 1){
 			$row = mysqli_fetch_assoc($r);
-      session_start();
+    //  session_start();
 			$_SESSION['user_id'] = $row['user_id'];
 			$_SESSION['first_name'] = $row['first_name'];
 			//$_SESSION['user_level'] = $row['user_level'];
@@ -29,10 +29,19 @@
 			$r = mysqli_query($db,$q);
 
 			if (mysqli_affected_rows($db) == 1){
+          if (isset($_SESSION['redirect_to'])){
+
+          $redirect = $_SESSION['redirect_to'];
+          unset($_SESSION['redirect_to']);
+          header("Location: sell.php");
+          exit();
+        }
+        else{
 					$url = BASE_URL  . 'index.php';
 
 			header("Location: $url");
-			}
+    }
+  }
 
 		}
 		else{
@@ -50,7 +59,7 @@
          <input type="submit" name="" value="Login!">
        </form>
 
-                   <a href="reset_password.php" class="form-forgotten-password">Forgotten password &middot;</a>
+                   <a href="forgot_password.php" class="form-forgotten-password">Forgotten password &middot;</a>
                    <a href="register.php" class="form-create-an-account">Create an account &rarr;</a>
                </div>
 

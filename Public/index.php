@@ -6,11 +6,11 @@
 
     <div id="slider">
       <figure>
-        <a href=""><img src="Includes/ccslideimg1.jpg"></a>
-        <a href=""><img src="Includes/ccslideimg2.jpg"></a>
-        <a href=""><img src="Includes/ccslideimg3.jpg"></a>
-        <a href=""><img src="Includes/ccslideimg4.jpg"></a>
-        <a href=""><img src="Includes/ccslideimg5.jpg"></a>
+        <a href=""><img src="Images/ccslideimg1.jpg"></a>
+        <a href=""><img src="Images/ccslideimg2.jpg"></a>
+        <a href=""><img src="Images/ccslideimg3.jpg"></a>
+        <a href=""><img src="Images/ccslideimg4.jpg"></a>
+        <a href=""><img src="Images/ccslideimg5.jpg"></a>
       </figure>
     </div>
 

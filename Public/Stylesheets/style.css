@@ -73,14 +73,14 @@ h1 {
 
 .hmecat .quiztxt {
   width: 10rem;
-  background-image: url('../Includes/quizimg.jpg');
+  background-image: url('../Images/quizimg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .hmecat .prodtxt {
-  background-image: url("../Includes/prodimg3.jpg");
+  background-image: url("../Images/prodimg3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

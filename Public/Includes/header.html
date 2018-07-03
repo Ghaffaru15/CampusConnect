@@ -12,15 +12,16 @@
 			echo $page_title;
 		?>
 	</title>
-  <link rel="stylesheet" href="Includes/reset.css">
-  <link rel="stylesheet" href="Includes/header.css">
-	<link rel="stylesheet" href="Includes/footer.css">
-	<link rel="stylesheet" href="Includes/style.css">
-	<link rel="stylesheet" href="Includes/slider.css">
-	<link rel="stylesheet" href="Includes/signup.css">
-  <link rel="stylesheet" href="Includes/login.css">
-  <link rel="stylesheet" href="Includes/sell.css">
-  <link rel="stylesheet" href="Includes/products.css">
+  <link rel="stylesheet" href="Stylesheets/reset.css">
+  <link rel="stylesheet" href="Stylesheets/header.css">
+	<link rel="stylesheet" href="Stylesheets/footer.css">
+	<link rel="stylesheet" href="Stylesheets/style.css">
+	<link rel="stylesheet" href="Stylesheets/slider.css">
+	<link rel="stylesheet" href="Stylesheets/signup.css">
+  <link rel="stylesheet" href="Stylesheets/login.css">
+  <link rel="stylesheet" href="Stylesheets/sell.css">
+  <link rel="stylesheet" href="Stylesheets/products.css">
+  <link rel="stylesheet" href="Stylesheets/header-user-dropdown.css">
 
   </head>
   <body>
@@ -41,20 +42,27 @@
               <a href="sell.php">Sell your product</a></li>
 
           <li><a href="">Work with us</a></li>
-
+            <?php
+            if (isset($_SESSION['user_id']))
+                echo '<li><a href="view_products.php">View my products</a></li>';
+            ?>
             <?php
                 if (isset($_SESSION['user_id']))
                     echo '<li><a href="logout.php">Logout</a></li>';
                 else
                     echo '<li><a href="login.php">Login</a></li>';
             ?>
-
+            <?php
+              if (isset($_SESSION['user_id']))
+                  echo '<li><a href="change_password.php">Change Password</a></li>';
+            ?>
 
             <?php
               if (!isset($_SESSION['first_name']))
                 echo '<li id="signup"><a href="register.php">Sign up!</a></li>';
-              else
-                echo $_SESSION['first_name'];
+              else{
+                  echo $_SESSION['first_name'];
+                }
             ?>
 
         </ul>

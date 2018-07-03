@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
       if (is_uploaded_file($_FILES['image']['tmp_name'])){
-  			$temp = "C:/xampp/Campus/" . md5($_FILES['image']['name']);
+  			$temp = "../Uploads/" . md5($_FILES['image']['name']);
   			 if (move_uploaded_file($_FILES['image']['tmp_name'], $temp)){
   				//echo '<p>File moved</p>';
   				$image = $_FILES['image']['name'];
@@ -138,7 +138,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 </div>';
 }
 else{
+  $_SESSION['redirect_to'] = $_SERVER['REQUEST_URI'];
   header("Location: login.php");
+  exit();
 }
 ?>
 <?php
