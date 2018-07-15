@@ -1,125 +1,445 @@
-.container {
-  font-family: helvetica, sans-serif;
-}
+/*
+ blue color: #007791
+ dark orange: #e67e22
+ 1st grey: #e8e8e8
+ 2nd grey: #e0e0e0
+ box text blue: #005b6f
+*/
 
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 0.3rem;
-}
+/*----------------------------------------------------------*/
+/* GENERAL CODES  */
+/*----------------------------------------------------------*/
 
-.container ul {
-  display: flex;
-  align-content: space-between;
-  background-color: #007791;
-  color: white;
-  margin: 0.6rem 0.4rem;
-  font-weight: bold;
+html {
+    font-size: 20px;
+    font-family: "Lato", "helvetica", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
-
-.container ul li {
-  padding: 0.2rem 4.5rem;
-  color: #710101;
-  display: inline-flex;
-  align-content: space-between;
-  border-right: 2px solid white;
-}
-
-#itsforyou {
-  border-right: 0;
-}
-
-.hmecat {
-  display: flex;
-}
-
-.hmecontent {
-  display: ;
-}
-.hmecat{
-  display: inline-flex;
-  margin: 0 4rem;
-  padding-right: 2rem;
-}
-
-.hmecat p {
-  width: 70%;
-  padding: 0.5rem 0.2rem;
-  margin-left: 2rem;
-  line-height: 2rem;
-  color: #007791;
-}
-
-.hmecat .quiz p {
-  margin-left: 6rem;
-  width: 60%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-.hmecat .text {
-  height: 9.5rem;
-  padding: 0.5rem 0.6rem;
-  width: 80%;
-  margin-right: 3rem;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #710101;
-  font-family: comic, sans-serif;
-  border: 1px solid #710101;
-  border-radius: 3px;
+/*----------------------------------------------------------*/
+/* REUSABLE CODES */
+/*----------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
-.hmecat .quiztxt {
-  width: 10rem;
-  background-image: url('../Images/quizimg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+a {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-.hmecat .prodtxt {
-  background-image: url("../Images/prodimg3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+li {
+    list-style: none;
 }
 
-.messages {
-  width: 70%;
-  margin: 1rem 15%;
-  border: 1px solid  #710101;
-  border-radius: 3px;
-  font-family: helvetica, sans-serif;
-  line-height: 1.5rem;
-  color: #007791;
+h2 {
+    color:  #e67e22;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
-
-.hmemsgs {
-  margin-bottom: 3rem;
-  text-align: center;
-
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
-.hmemsgs h1 {
-  margin: 0.8rem 0;
-}
-
-.hmecat a {
-  text-decoration: none;
+h3 {
+    font-size: 120%;
+    margin-bottom: 10px;
 }
 
 
+/*----------------------------------------------------------*/
+/* ICON STYLING  */
+/*----------------------------------------------------------*/
+.sell-drop-icon {
+    font-size: 100%;
+    vertical-align: middle;
+    color: #e67e22;
+}
+
+.icon-bar {
+    font-size: 110%;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    color: #007791;
+}
+
+
+/*----------------------------------------------------------*/
+/* HEADER */
+/*----------------------------------------------------------*/
+
+/* LOGO AND NAME */
+header {
+    background-color: #007791;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+header h1 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 150%;
+    line-height: 20px;
+}
+
+header h1 span {
+    font-size: 160%;
+    color: #e67e22;
+}
+
+header img {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    transform: scale(1.12);
+    transition: transform 0.4s;
+}
+
+header img:hover {
+    transform: scale(1.0);
+}
+
+.main-nav {
+    float: right;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+
+}
+
+/* NAVIGATION STYLING */
+.main-nav  li {
+    display: inline-block;
+
+}
+
+.main-nav a {
+    margin: 0 15px;
+    padding-bottom: 10px;
+    font-family: helvetica;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.main-nav #sign-up a {
+    background-color: #e67e22;
+    border-radius: 5px;
+    padding: 1px 2px;
+}
+
+.main-nav a:hover {
+    border-bottom: 3px solid #fff;
+}
+
+.dropdown-nav {
+    display: none;
+    position: absolute;
+    top: 140%;
+    left: -20%;
+    background-color: #007791;
+    list-style: none;
+}
+.dropdown-nav li {
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 750px){
+  header h1 {
+    display: none;
+  }
+
+    .main-nav a {
+    margin: 0 5px;
+    padding-bottom: 10px;
+    font-family: helvetica;
+    font-weight: 500;
+    font-size: 100%;
+}
+    h2 {
+    color:  #e67e22;
+    font-size: 130%;
+    word-spacing: 1px;
+    margin-bottom: 4px;
+}
+    .bar {
+    font-size: 100%;
+    height: 10px
+}
 
 
 
+}
 
 
 
+/*--------------------------------------------------------*/
+/* SECTION WITH TITLE(BELOW SLIDER) AND TEXT-BAR(ALSO BELOW) */
+/*--------------------------------------------------------*/
+
+
+.section-title,
+.section-bar{
+    background-color: #e8e8e8;
+    text-align: center;
+    color: #e67e22;
+}
+
+.bar {
+    border-top: 1px solid #007791;
+    border-bottom: 1px solid #007791;
+    height: 40px;
+    padding-top: 4px;
+}
+
+.bar:first-child {
+    border-right: 1px solid #007791;
+}
+
+.bar:nth-child(2) {
+    border-left: 1px solid #007791;
+}
 
 
 
+/*--------------------------------------------------------*/
+/* SECTION WITH LINKS TO PRODUCTS AND QUIZ PAGE */
+/*--------------------------------------------------------*/
 
-.
+.mainbody {
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.section-home-main {
+    width: 60%;
+    margin-left: 23%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+
+.section-home-main .link-img {
+    display: inline-block;
+    text-align: center;
+    height: 180px;
+}
+
+.section-home-main .link-img h3 {
+    font-size: 150%;
+    font-weight: 600;
+    color: #e67e22;
+    margin-top: 70px;
+}
+
+.section-home-main .products-img {
+    margin-right: 20%;
+    border: 1px solid #007791;
+    border-radius: 20%;
+    background-image:linear-gradient(rgba(190, 190, 190, 0.50), rgba(190, 190, 190, 0.50)), url('../Images/prodimg3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.10);
+    transition: transform 0.4s;
+}
+
+.section-home-main .products-img:hover {
+    transform: scale(1.0);
+}
+
+.section-home-main .quiz-img {
+    border: 1px solid #007791;
+    border-radius: 20%;;
+    background-image: linear-gradient(rgba(190, 190, 190, 0.32), rgba(190, 190, 190, 0.32)), url('../Images/quizimg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.10);
+    transition: transform 0.4s;
+}
+
+.section-home-main .quiz-img:hover {
+    transform: scale(1.0);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px){
+  .section-home-main {
+    width: 80%;
+    margin-left: 15%;
+    transform: translateY(-50);
+}
+    .section-home-main .link-img h3 {
+    font-size: 130%;
+
+}
+
+}
+
+@media only screen and (max-width: 600px){
+  .section-home-main {
+    width: 100%;
+    margin-left: 58%;
+    transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 480px){
+  .section-home-main {
+    width: 60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+    .section-home-main .quiz-img{
+    margin-top: 30px;
+
+    }
+}
+
+
+/*--------------------------------------------------------*/
+/* CUSTOMER ASSURANCE SECTION */
+/*--------------------------------------------------------*/
+.section-customer-assurance {
+    background-color: #e8e8e8;
+    padding-top: 20px;
+}
+
+.box {
+    padding: 10px 1.8%;
+    text-align: center;
+    color: #005b6f;
+    line-height: 145%;
+}
+
+.box h3 {
+    color: #e67e22;
+}
+
+.box .box-icon {
+    font-size: 30px;
+}
+
+
+
+/*--------------------------------------------------------*/
+/* FOOTER */
+/*--------------------------------------------------------*/
+
+footer {
+    background-color: #007791;
+}
+
+footer .footer-links {
+    margin-top: 10px;
+}
+
+footer .footer-links li {
+    padding-bottom: 8px;
+}
+
+footer a:hover {
+    color: #e67e22;
+}
+
+.footer-logo {
+    padding-top: 15px;
+    padding-left: 3px;
+   }
+
+footer img {
+    float: left;
+    height: auto;
+    width: 100px;
+    border-radius: 50%;
+}
+
+footer .footer-logo p {
+    line-height: 100px;
+    color: #e67e22;
+    font-size: 16px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 850px){
+    footer .footer-logo p {
+    font-size: 12px;
+    line-height: 80px;
+   }
+
+    .footer-logo {
+    padding-top: 40px;
+   }
+
+    footer img {
+    float: left;
+    height: auto;
+    width: 80px;
+    border-radius: 50%;
+}
+
+    footer .span-1-of-3 {
+		width: 32.26% !important;
+	}
+}
+
+@media only screen and (max-width: 650px){
+    footer img {
+    float: none;
+    width: 80px;
+    border-radius: 50%;
+   }
+
+    .footer-logo {
+    padding-top: 20px;
+   }
+
+    footer .footer-logo p {
+    font-size: 12px;
+    line-height: 30px;
+   }
+
+    footer .footer-links li {
+    font-size: 16px;
+   }
+}
+
+@media only screen and (max-width: 450px){
+    footer .footer-links li {
+    font-size: 13px;
+    margin-bottom: 7px;
+   }
+}

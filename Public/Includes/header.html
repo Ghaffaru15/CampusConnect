@@ -1,70 +1,69 @@
 <?php
+ob_start();
   session_start();
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
-  <head>
-
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-    <title>
-		<?php
-			echo $page_title;
-		?>
-	</title>
-  <link rel="stylesheet" href="Stylesheets/reset.css">
-  <link rel="stylesheet" href="Stylesheets/header.css">
-	<link rel="stylesheet" href="Stylesheets/footer.css">
-	<link rel="stylesheet" href="Stylesheets/style.css">
-	<link rel="stylesheet" href="Stylesheets/slider.css">
-	<link rel="stylesheet" href="Stylesheets/signup.css">
-  <link rel="stylesheet" href="Stylesheets/login.css">
-  <link rel="stylesheet" href="Stylesheets/sell.css">
-  <link rel="stylesheet" href="Stylesheets/products.css">
-  <link rel="stylesheet" href="Stylesheets/header-user-dropdown.css">
-
-  </head>
-  <body>
-
-  <header>
-		<div class="headlogo">
-			<a href="index.php">Campus Connect</a>
-		</div>
-	<!--	<form class="searchbar" action="process.php" method="post">
-			<input type="text" name="searchquery" value="">
-			<input type="submit" name="submit" value="Search">
-		</form>
-  -->
-		<nav class="nav">
-        <ul>
-          <li>
-
-              <a href="sell.php">Sell your product</a></li>
-
-          <li><a href="">Work with us</a></li>
+    <head>
+        <title>
             <?php
-            if (isset($_SESSION['user_id']))
-                echo '<li><a href="view_products.php">View my products</a></li>';
+                echo $page_title;
             ?>
-            <?php
-                if (isset($_SESSION['user_id']))
-                    echo '<li><a href="logout.php">Logout</a></li>';
-                else
-                    echo '<li><a href="login.php">Login</a></li>';
-            ?>
-            <?php
-              if (isset($_SESSION['user_id']))
-                  echo '<li><a href="change_password.php">Change Password</a></li>';
-            ?>
+        </title>
+        <link rel="stylesheet" href="Stylesheets/header.css">
+        <link rel="stylesheet" href="Stylesheets/footer.css">
+        <link rel="stylesheet" href="Stylesheets/grid.css">
+        <link rel="stylesheet" href="Stylesheets/normalize.css">
+        <link rel="stylesheet" href="Stylesheets/style.css">
+        <link rel="stylesheet" href="Stylesheets/slider.css">
+      <link rel="stylesheet" href="Stylesheets/sign-up.css">
+        <link rel="stylesheet" href="Stylesheets/login.css">
+        <link rel="stylesheet" href="Stylesheets/sell_product.css">
 
-            <?php
-              if (!isset($_SESSION['first_name']))
-                echo '<li id="signup"><a href="register.php">Sign up!</a></li>';
-              else{
-                  echo $_SESSION['first_name'];
-                }
-            ?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="Javascripts/main.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+               <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
 
-        </ul>
-      </nav>
-  </header>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body>
+<!----------------------------------------------->
+<!--- HEADER -->
+<!----------------------------------------------->
+        <header>
+            <div class="row">
+                <a href="index.php"><img src="Images/logo.png" alt="Logo"></a>
+                <h1><a href="index.php"><span>C</span>ampus <span>C</span>onnect</a></h1>
+                <ul class="main-nav">
+                    <li id="sell-nav"><a href="#">Sell<ion-icon name="arrow-dropdown" class="sell-drop-icon"></ion-icon>
+</a>
+                        <ul class="dropdown-nav dropdown>">
+                            <li><a href="sell_product.php">Post your product</a></li> <br>
+                            <li><a href="#">Become a Quiz Tutor</a></li>
+                        </ul>
+                    </li>
+                    <?php
+                        if (!isset($_SESSION['user_id'])){
+                            echo '<li><a href="login.php">Login</a></li>
+                            <li id="sign-up"><a href="signup.php">Sign up!</a></li>';
+                        }
+                        else{
+                            echo '<li id="user-nav"><a href="#"><ion-icon name="contact" class="user-icon"></ion-icon></a>
+                                    <ul class="user-dropdown">
+                                        <li>' . $_SESSION['first_name'] . '</li>
+                                        <li><a href="change_password.php">Change password</a></li>
+                                        <li><a href="logout.php">Logout</a></li>
+                                    </ul>
+                                </li></ul>';
+                        }
+                    ?>
+
+
+
+            </div>
+
+        </header>
+
+    <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>

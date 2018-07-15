@@ -1,90 +1,236 @@
+/*
+ blue color: #007791
+ dark orange: #e67e22
+ 1st grey: #e8e8e8
+ 2nd grey: #e0e0e0
+ box text blue: #005b6f
+*/
+
+/*----------------------------------------------------------*/
+/* GENERAL CODES  */
+/*----------------------------------------------------------*/
+
 html {
-  font-size: 2rem;
-  font-family: helvetica;
+    font-size: 20px;
+    font-family: "Lato", "helvetica", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-/* Header styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*----------------------------------------------------------*/
+/* REUSABLE CODES */
+/*----------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    color:  #e67e22;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+
+/*----------------------------------------------------------*/
+/* ICON STYLING  */
+/*----------------------------------------------------------*/
+.sell-drop-icon {
+    font-size: 100%;
+    vertical-align: middle;
+    color: #e67e22;
+}
+
+.icon-bar {
+    font-size: 110%;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    color: #007791;
+}
+
+.user-icon {
+    font-size: 30px;
+    position: absolute;
+    top: 25%;
+    right: 3%;
+    color: #e67e22;
+}
+
+/*----------------------------------------------------------*/
+/* HEADER */
+/*----------------------------------------------------------*/
+
+/* LOGO AND NAME */
 header {
- height:60px; /*3rem;*/
- width: 100%;
- background-color: #007791;
- /*display: flex; */
- display: flex;
-/* padding: 0.2rem 1rem; */
- color: white;
- /*line-height: 60px; */
- /*position: fixed; */
- /*z-index: 1;*/
+    background-color: #007791;
+    position: relative;
+    width: 100%;
+    height: 60px;
 }
 
-header .headlogo {
- /* margin-right: 3rem; */
-  padding-left: 3%;
-  padding-top: 10px;
-  padding-buttom: 10px;
-  font-size: 2rem;
-  font-family: comic, helvetica, cursive;
-  width: 25%;
+header h1 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 150%;
+    line-height: 20px;
 }
 
-form{
-	padding-top: 20px;
-	padding-buttom: 10px;
-	margin-right: 12rem;
-	display: inline;
-	width: 20%;
+header h1 span {
+    font-size: 160%;
+    color: #e67e22;
 }
 
-header nav {
-  display: inline;
-  float: right;
-  width: 49%;
-  padding-top: 20px;
+header img {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    transform: scale(1.12);
+    transition: transform 0.4s;
 }
 
-.nav li {
-  display: inline;
-  color: #007791;
-  background-color: white;
-  margin: 0.2rem;
- padding: 0.2rem 0.8rem;
-  border-radius: 2px;
+header img:hover {
+    transform: scale(1.0);
 }
 
-#signup {
-  background-color: #710101;
-  color: white;
+.main-nav {
+    float: right;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+
 }
 
-.headlogo a {
-  text-decoration: none;
-  color: white;
+/* NAVIGATION STYLING */
+.main-nav  li {
+    display: inline-block;
+
 }
 
-ul a {
-  text-decoration: none;
-  color: #007791;
+.main-nav a {
+    margin: 0 15px;
+    padding-bottom: 10px;
+    font-family: helvetica;
+    font-size: 120%;
+    font-weight: 500;
 }
 
-#signup a {
-  color: white;
+.main-nav #sign-up a {
+    background-color: #e67e22;
+    border-radius: 5px;
+    padding: 1px 2px;
 }
 
-a:hover {
-  font-weight: 550;
-  transition: 0.3s;
+.main-nav a:hover {
+    border-bottom: 3px solid #fff;
 }
 
-.headlogo a:hover {
-  color: #710101;
-  font-weight: 500;
-  transition: 0.5s;
+.dropdown-nav {
+    display: none;
+    position: absolute;
+    top: 140%;
+    left: -20%;
+    background-color: #007791;
+    list-style: none;
+}
+.dropdown-nav li {
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
 }
 
-nav a:hover {
-  color: #710101;
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 3%;
+    background-color: #007791;
+    list-style: none;
+}
+.user-dropdown li {
+    padding: 5px ;
+    border-bottom: 1px solid #fff;
+    margin-top: 0 !important;
+    text-align: center;
 }
 
-#signup a:hover {
-  color: yellow;
+.user-dropdown a {
+    margin: 0 15px;
+    padding-bottom: 10px;
+    font-family: helvetica;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 750px){
+  header h1 {
+    display: none;
+  }
+
+    .main-nav a {
+    margin: 0 5px;
+    padding-bottom: 10px;
+    font-family: helvetica;
+    font-weight: 500;
+    font-size: 100%;
+}
+    h2 {
+    color:  #e67e22;
+    font-size: 130%;
+    word-spacing: 1px;
+    margin-bottom: 4px;
+}
+    .bar {
+    font-size: 100%;
+    height: 10px
+}
+
+
+
 }

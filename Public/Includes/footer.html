@@ -1,32 +1,37 @@
 
-    <footer>
-      <div class="footlogo">
-        Campus Connect
-      </div>
-      <div class="footer">
-        <ul class="footcol1">
-          <li><a href="">Buy a Product</a></li>
-          <li><a href="">Sell your product/service</a></li>
-          <li><a href="">Advertise your product/service</a></li>
-          <li><a href="">Sales Optimization</a></li>
-        </ul>
-        <ul class="footcol2">
-          <li><a href="">Buy a Quiz Pack</a></li>
-          <li><a href="">Post a Quiz pack</a></li>
-          <li><a href="">Talk to Us</a></li>
-          <li><a href="">Special Services</a></li>
-        </ul>
-        <ul class="footcol4">
-          <?php
-            if (!isset($_SESSION['user_id']))
-                echo '<li>Have an account? <em><a href="login.php">Login!</a></em></li>';
-          ?>
-      <?php
-          if (!isset($_SESSION['user_id']))
-            echo '<li>New here? <em><a href="register.php">Sign up!</a></em></li>';
-      ?>
-        </ul>
-      </div>
-    </footer>
-  </body>
+
+<!----------------------------------------------->
+<!-- FOOTER -->
+<!----------------------------------------------->
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-3 footer-logo">
+                    <img src="Images/logo.png" alt="Logo">
+                    <p>Copyright &#x24B8; 2018</p>
+                </div>
+                <div class="col span-1-of-3 footer-links">
+                    <ul>
+                        <li><a href="#">Buy a Product</a></li>
+                        <li><a href="#">Sell your Product/Service</a></li>
+                        <li><a href="#">Advertise your product/service</a></li>
+                        <li><a href="#">Let's help you Sell Faster</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-3 footer-links">
+                    <ul>
+                        <li><a href="#">Buy a Quiz Pack</a></li>
+                        <li><a href="#">Post a Quiz pack</a></li>
+                        <li><a href="#">Talk to Us</a></li>
+                        <li><a href="">Special Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                
+
 </html>
+<?php
+    ob_end_flush();
+?>
