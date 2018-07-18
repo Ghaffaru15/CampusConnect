@@ -82,7 +82,7 @@
                                     unset($_SESSION['redirect_to']);
                                     header("Location: sell_product.php");
                                   exit();
-                                }
+                              }
                                 else{
                                   $url = BASE_URL  . 'index.php';
 

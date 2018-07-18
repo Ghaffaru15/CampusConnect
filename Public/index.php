@@ -32,7 +32,7 @@
 <!-- THE SECTION WITH LINKS TO THE PRODUCT AND QUIZ PAGES --> <!----------------------------------------------->
 <section class="mainbody">
 <section class="row section-home-main">
-    <a href="#"><div class="col span-1-of-3 link-img products-img">
+    <a href="products_pagination.php"><div class="col span-1-of-3 link-img products-img">
         <h3>PRODUCTS</h3>
     </div></a>
 

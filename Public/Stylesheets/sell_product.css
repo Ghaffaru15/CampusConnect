@@ -1,0 +1,191 @@
+/*
+ blue color: #007791
+ dark orange: #e67e22
+ 1st grey: #e8e8e8
+ 2nd grey: #e0e0e0
+ box text blue: #005b6f
+*/
+
+/*----------------------------------------------------------*/
+/* GENERAL CODES  */
+/*----------------------------------------------------------*/
+
+html {
+    font-size: 20px;
+    font-family: "Lato", "helvetica", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*----------------------------------------------------------*/
+/* PRODUCT STEPS MAIN DETAILS STYLING */
+/*----------------------------------------------------------*/
+.product-sell-container h2 {
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.product-sell-container h2:after {
+    display: block;
+    height: 2px;
+    background-color: #005b6f !important;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 5px !important;
+    margin-bottom: 20px !important;
+}
+
+.product-sell-container {
+    width: 100%;
+    background-color: rgba(0, 91, 111, 0.61);
+}
+
+.product-steps {
+    width: 80%;
+    margin-left: 10%;
+    transform: scalescaleX(-50%;);
+}
+
+.step {
+    background-color: #007791;
+    margin-bottom: 15px;
+    height: 80px;
+    padding: 0.9% 0 0.9% 15px;
+    border: 2px solid #007791;
+    border-radius: 5px;
+}
+
+ .product-sell-container .col {
+    width: 45%
+}
+
+.step input {
+    width: 100%;
+    border: 3px solid rgba(0, 91, 111, 0.61);
+    height: 35px;
+    border-radius: 5px;
+    padding: 6px;
+    color: #007791;
+}
+
+.product-sell-container form select {
+    width: 100%;
+    border: 3px solid rgba(0, 91, 111, 0.61);
+    height: 35px;
+    border-radius: 5px;
+    color: #007791;
+}
+
+.product-sell-container form select:hover {
+    cursor: pointer;
+
+}
+
+.step label {
+    color: #fff;
+    font-weight: 500;
+}
+
+.step textarea {
+    height: 250px;
+    width: 100%;
+    resize: none;
+    color: #007791;
+    padding: 5px;
+    border: 3px solid rgba(0, 91, 111, 0.61);
+    border-radius: 8px;;
+}
+
+.product-description {
+    height: 300px;
+}
+
+#submit-btn {
+    width: 70%;
+    margin-left: 15%;
+    border: 3px solid #e67e22;
+    height: 55px;
+    border-radius: 15px;
+    padding: 6px;
+    color: #e67e22;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    transition: transform 0.4s;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+/*----------------------------------------------------------*/
+/* PRODUCT STEPS IMAGES UPLOAD SECTION STYLING */
+/*----------------------------------------------------------*/
+.img-upload-container {
+    background-color: #007791;
+}
+
+#img-1,
+#img-2,
+#img-3,
+#img-4,
+#img-5 {
+    display: none;
+}
+
+.fa-upload {
+    padding-right: 5px;
+}
+
+.img-upload label {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+    margin: 5px;
+    color: #fff;
+    transition: transform 0.4s;
+}
+
+.img-upload label:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+#img-upload-2,
+#img-upload-3,
+#img-upload-4 {
+    display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 480px) {
+    .product-sell-container .col {
+    width: 85%
+}
+    .step textarea {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .step {
+    padding: 2.5% 0 2% 15px;
+}
+
+
+}

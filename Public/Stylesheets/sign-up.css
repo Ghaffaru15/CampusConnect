@@ -1,0 +1,118 @@
+/*
+ blue color: #007791
+ dark orange: #e67e22
+ 1st grey: #e8e8e8
+ 2nd grey: #e0e0e0
+ box text blue: #005b6f
+*/
+
+/*----------------------------------------------------------*/
+/* GENERAL CODES  */
+/*----------------------------------------------------------*/
+
+html {
+    font-size: 20px;
+    font-family: "Lato", "helvetica", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sign-up-container {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/sign-up-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*----------------------------------------------------------*/
+/* SIGN UP FORM  */
+/*----------------------------------------------------------*/
+.sign-up-container h2 {
+    margin-bottom: 0px !important;
+}
+
+.sign-up-container form {
+    margin: 100px 10% 100px 20%;
+    margin-top: 30px !important;
+}
+
+.sign-up-container form label {
+    font-size: 115%;
+    margin-bottom: 20px;
+    color: #fff;
+    word-spacing: 8px;
+}
+
+.sign-up-container form label span {
+    font-size: 120%;
+    color: #e67e22;
+    font-weight: 500;
+}
+
+.sign-up-container form input {
+    margin-left: 5%;
+    width: 60%;
+    color: #005b6f;
+    margin-bottom: 20px;
+    height: 40px;
+    border: 2px solid #e67e22;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 5px;
+}
+
+.sign-up-container form #submit-button {
+    font-size: 200%;
+    color: #e67e22;
+}
+
+.sign-up-container form #submit-button:hover {
+    transform: scale(0.9);
+    color: #552d0a;
+    border-color: #552d0a;
+    transition: transform 0.4s, color 0.4s;
+}
+
+.sign-up-container form #submit-button {
+    font-size: 155%;
+    border-radius: 20px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+    .sign-up-container form {
+    margin: 100px 1% 100px 10%;
+    font-size: 80%;
+}
+}
+
+
+@media only screen and (max-width: 480px) {
+    .sign-up-container form {
+    margin: 100px 2%;
+    font-size: 65%;
+}
+    .sign-up-container form input {
+        font-size: 140%;
+    }
+
+    .sign-up-container form input {
+        width: 85%;
+    }
+
+	  .sign-up-container form .span-2-of-3 {
+	width: 66.13% !important;
+}
+
+    .sign-up-container form .span-1-of-3 {
+	width: 32.26% !important;
+}
+}
